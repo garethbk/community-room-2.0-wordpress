@@ -1,0 +1,17 @@
+/*
+Theme Name: Community Room
+Theme URI: http://garethbk.com/
+Description: Second iteration of Community Room theme
+Author: Gareth bk
+Author URI: http://garethbk.com/
+Version: 2.0
+Tags: responsive, bootstrap
+
+License: Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
+License URI: http://creativecommons.org/licenses/by-sa/3.0/
+*/
+
+@import url('css/main-styles.css');
+@import url('css/bootstrap.min.css');
+@import url('css/animate.css');
+@import url(http://fonts.googleapis.com/css?family=Mandali);
