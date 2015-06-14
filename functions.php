@@ -14,6 +14,20 @@ function cr_add_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'cr_add_scripts' );
 
+//register primary nav menu
+function cr_nav_menu() {
+	register_nav_menus(
+		array(
+			'header-menu' => __('Header Menu'),
+			'mobile-menu' => __('Mobile Menu')
+		)
+	);
+}
+add_action( 'init', 'cr_nav_menu' );
+
+//register bootstrap navwalker class
+require_once('wp_bootstrap_navwalker.php');
+
 //add custom header functionality
 function cr_custom_header_setup() {
     $args = array(

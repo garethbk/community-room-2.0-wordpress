@@ -24,37 +24,38 @@
 
 		<div class="container">
 
-			<a href="front-page.html"><img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="CR header image" /></a>
+			<a href="<?php bloginfo('url')?>"><img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="CR header image" /></a>
 
-			<ul class="nav navbar-nav">
-				<li><a href="about.html">ABOUT</a></li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">SHOWS<span class="caret"></span></a>
-					<ul class="dropdown-menu" role="menu">
-						<li><a href="current-show.html">CURRENT</a></li>
-						<li><a href="shows.html">PAST</a></li>
-					</ul>
-				</li>
-				<li><a href="">SUBMIT</a></li>
-			</ul>
-
-		</div>
+			<?php
+				wp_nav_menu( array(
+					'menu' => 'header-menu',
+					'depth' => 2,
+					'container' => false,
+					'menu_class' => 'nav navbar-nav',
+					'walker' => new wp_bootstrap_navwalker()
+					)
+				);
+			?>
 
 	</nav>
 
 	<nav class="nav-mobile navbar-fixed-top">
 		<div class="container">
-			<a href="front-page.html"><img src="<?php header_image(); ?>" alt="CR header image" /></a>
+			<a href="<?php bloginfo('url')?>"><img src="<?php header_image(); ?>" alt="CR header image" /></a>
 			<div class="dropdown">
 				<div class="nav-mobile-fold dropdown-toggle" id="mobileNav" data-toggle="dropdown">
 					&#9776;
 				</div>
-				<ul class="nav-mobile-menu dropdown-menu" role="menu" aria-labelledby="mobileNav">
-					<li><a href="">ABOUT</a></li>
-					<li><a href="">CURRENT SHOW</a></li>
-					<li><a href="">PAST SHOWS</a></li>
-					<li><a href="">SUBMIT</a></li>
-				</ul>
+				<?php
+				wp_nav_menu( array(
+					'menu' => 'mobile-menu',
+					'depth' => 2,
+					'container' => false,
+					'menu_class' => 'nav-mobile-menu dropdown-menu',
+					'walker' => new wp_bootstrap_navwalker()
+						)
+					);
+				?>
 			</div>
 		</div>
 	</nav>
