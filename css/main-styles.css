@@ -17,6 +17,34 @@ a, p {
 	font-family: 'Mandali', sans-serif;
 }
 
+#page-content {
+	margin-top: 100px;
+}
+
+#page-content .container {
+	background-color: rgba(0, 0, 0, 0.15);
+	padding-top: 15px;
+	padding-left: 25px;
+}
+
+/* Flubbing Ninja Form styles and also bootstrap button */
+
+.text-wrap.label-above input {
+	width: 200px !important;
+}
+
+.textarea-wrap.label-above textarea {
+	width: 350px !important;
+}
+
+.btn {
+	border: 1px solid black !important;
+}
+
+.btn:hover {
+	background-color: lightgray;
+}
+
 /* Navigation/Header Styles */
 
 #main-nav {
@@ -70,6 +98,10 @@ a, p {
 	background-color: #C1DF33;
 }
 
+#main-nav ul.dropdown-menu>.active>a {
+	background-color: rgb(225, 87, 129);
+}
+
 #main-nav img {
 	margin-top: 2px;
 }
@@ -105,10 +137,17 @@ a, p {
 	top: 48px;
 	left: 50%;
 	background-color: rgba(206, 47, 95, 1.0);
+	padding: 0;
+	margin: 0;
+	border: 0;
 }
 
 .nav-mobile-menu.dropdown-menu li a {
 	color: white;
+}
+
+.nav-mobile-menu.dropdown-menu>.active>a {
+	background-color: rgb(225, 87, 129);
 }
 
 
@@ -173,7 +212,7 @@ a, p {
 #about {
 	height: auto;
 	width: 100%;
-	margin-top: 225px;
+	margin-top: 175px;
 }
 
 #info {
@@ -369,7 +408,7 @@ a, p {
 #the-show {
 	height: auto;
 	width: 100%;
-	margin-top: 75px;
+	margin-top: 30px;
 	text-align: center;
 
 	font-family: 'Mandali', sans-serif;
@@ -401,7 +440,6 @@ a, p {
 	min-height: 500px;
 	height: auto;
 	margin-bottom: 100px;
-	background-image: url("../images/fm_flyer_crop.jpg");
 	background-size: cover;
 }
 
@@ -440,6 +478,10 @@ a, p {
 	cursor: pointer;
 }
 
+img.img-responsive {
+	margin-left: auto;
+	margin-right: auto;
+}
 
 .next {
 	float: right;
@@ -455,12 +497,44 @@ a.controls:hover {
 }
 
 .modal-content {
-	width: 1000px;
-	max-height: auto;
+	max-width: 1000px;
 }
 
 #myModal {
 	margin-right: 350px;
+}
+
+/* Current Show Page Styles */
+
+#the-current-show {
+	margin-top: 100px;
+}
+
+#current-show-desc {
+	background-color: rgba(0, 0, 0, 0.5);
+	height: auto;
+	font-family: 'Mandali', sans-serif;
+	color: white;
+	padding-left: 20px;
+	padding-bottom: 20px;
+}
+
+#current-show-desc p {
+	font-size: 17px;
+}
+
+#current-show-desc a {
+	font-size: 17px;
+	color: lightgrey;
+}
+
+#current-show-desc a:hover {
+	color: darkgrey;
+	text-decoration: none;
+}
+
+.current-show-img {
+	max-width: 100%;
 }
 
 /**************
@@ -480,6 +554,14 @@ a.controls:hover {
 
 	#grace, #rachel {
 		height: 450px;
+	}
+
+	#myModal {
+		margin-right: 300px;
+	}
+
+	.modal-content {
+		width: 900px;
 	}
 
 }
@@ -623,7 +705,7 @@ a.controls:hover {
 	}
 
 	#the-show {
-		margin-top: 50px;
+		margin-top: 35px;
 	}
 
 	#the-show h1 {

@@ -23,6 +23,9 @@
 
 	</div>
 
+	<div class="dummy-spacer">
+	</div>
+
 </section>
 
 <?php get_footer(); ?>

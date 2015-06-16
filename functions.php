@@ -65,7 +65,14 @@ function cr_showimage_customizer( $wp_customize ) {
 }
 add_action( 'customize_register', 'cr_showimage_customizer' );
 
-
+//fix for responsive images so they are not automatically rescaled out of proportion
+//from here: https://css-tricks.com/snippets/wordpress/remove-width-and-height-attributes-from-inserted-images/
+function remove_width_attribute( $html ) {
+   $html = preg_replace( '/(width|height)="\d*"\s/', "", $html );
+   return $html;
+}
+add_filter( 'post_thumbnail_html', 'remove_width_attribute', 10 );
+add_filter( 'image_send_to_editor', 'remove_width_attribute', 10 );
 
 
 ?>
