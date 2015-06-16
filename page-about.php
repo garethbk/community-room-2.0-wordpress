@@ -67,7 +67,7 @@
 			$args = array( 'post_type' => 'cr_folk', 'posts_per_page' => -1 );
 			$folks_loop = new WP_query( $args );
 			while ( $folks_loop->have_posts() ) : $folks_loop->the_post();
-				echo '<li class="col-lg-2 col-md-2 col-sm-3 col-xs-4"><figure class="artist-box">';
+				echo '<li class="col-lg-2 col-md-2 col-sm-10 col-xs-10"><figure class="artist-box">';
 				echo the_post_thumbnail();
 				echo '<figcaption class="artist-name"><a href="';
 				echo get_post_meta($post->ID, "_url", true);

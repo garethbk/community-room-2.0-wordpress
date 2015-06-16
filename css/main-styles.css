@@ -178,6 +178,7 @@ a, p {
 }
 
 .dummy-spacer {
+	height: 50px;
 	margin-bottom: 100px;
 }
 
@@ -520,7 +521,7 @@ a.controls:hover {
 }
 
 #current-show-desc p {
-	font-size: 17px;
+	font-size: 17px
 }
 
 #current-show-desc a {
@@ -535,6 +536,7 @@ a.controls:hover {
 
 .current-show-img {
 	max-width: 100%;
+	margin-bottom: 15px;
 }
 
 /**************
@@ -724,6 +726,22 @@ a.controls:hover {
 		margin-left: auto;
 		margin-right: auto;
 		text-align: center;
+	}
+
+	.past-show-caption {
+		font-size: 12px;
+	}
+
+	#page-content {
+		max-width: 100%;
+	}
+
+	.crFlyer {
+		max-width: 100%;
+	}
+
+	.textarea-wrap.label-above textarea {
+		width: 200px !important;
 	}
 }
 
